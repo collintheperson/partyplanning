@@ -39,6 +39,28 @@ public class PartyTest {
         int totalCost = newCost1 + newCost;
         assertEquals(15,totalCost);
     }
+    @Test
+    public void PartyPlanning_FindsCostofFourItems_15() throws Exception   {
+        Party newParty= new Party(1,"a","a","a");
+        int newCost = newParty.numberOfPeople *10;
+        String userInput1 = newParty.food;
+        String userInput2 = newParty.beverages;
+        String userInput3 = newParty.entertaiment;
+        Integer newCost1= 0;
+        Integer newCost2= 0;
+        Integer newCost3= 0;
+        if (userInput1 == "a") {
+            newCost1=5;
+        };
+        if (userInput2 == "a") {
+            newCost2=10;
+        };
+        if (userInput3 == "a") {
+            newCost3=500;
+        };
+        int totalCost = newCost1 + newCost + newCost2 + newCost3;
+        assertEquals(20,totalCost);
+    }
 
 
 }
