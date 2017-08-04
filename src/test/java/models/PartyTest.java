@@ -17,7 +17,7 @@ public class PartyTest {
 
     @Test
     public void PartyPlanning_FindsExpectedOutofString_10() throws Exception   {
-        Party newCost = new Party(1,"ab","a","a");
+        Party newCost = new Party(1,"a","a","a");
         assertEquals("a",newCost.food);
     }
 }
