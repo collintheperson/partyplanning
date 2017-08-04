@@ -4,10 +4,10 @@ package models;
  * Created by Guest on 8/4/17.
  */
 public class Party {
-    public int numberOfPeople;
-    public String food;
-    public String beverages;
-    public String entertaiment;
+    private int numberOfPeople;
+    private String food;
+    private String beverages;
+    private String entertaiment;
 
     public Party(int numberOfPeople, String food, String beverages, String entertainment)    {
         this.numberOfPeople = numberOfPeople;
@@ -16,6 +16,19 @@ public class Party {
         this.entertaiment = entertainment;
 }
 
+    public int getNumberOfPeople() {
+        return numberOfPeople;
+    }
 
+    public String getBeverages() {
+        return beverages;
+    }
 
+    public String getEntertaiment() {
+        return entertaiment;
+    }
+
+    public String getFood() {
+        return food;
+    }
 }

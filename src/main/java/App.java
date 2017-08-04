@@ -14,16 +14,6 @@ public class App {
 
         while (programRunning) {
 
-//            int newCost = newParty.numberOfPeople *10;
-//            int totalPeople = newParty.numberOfPeople;
-//            String userInput1 = newParty.food;
-//            String userInput2 = newParty.beverages;
-//            String userInput3 = newParty.entertaiment;
-
-
-            Integer newCoupon1 = 0;
-            Integer newCoupon2 = 0;
-
             try {
                 int foodCost = 0;
                 int drinkCost = 0;
