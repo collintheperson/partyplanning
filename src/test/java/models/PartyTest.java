@@ -10,9 +10,7 @@ import static org.junit.Assert.*;
 public class PartyTest {
     @Test
     public void PartyPlanning_FindTheCostOfOneVendor_a() throws Exception {
-        Party newPeople = new Party(0,"a","g","d");
-        int expected = 1;
+        Party newPeople = new Party(1,"a","g","d");
         assertEquals(1, newPeople.numberOfPeople);
     }
-
 }
