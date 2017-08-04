@@ -12,26 +12,26 @@ public class PartyTest {
     @Test
     public void PartyPlanning_FindTheAmountofPeople_1() throws Exception {
         Party newPeople = new Party(1,"a","g","d");
-        assertEquals(1, newPeople.getgetNumberOfPeople());
+        assertEquals(1, newPeople.getNumberOfPeople());
     }
 
     @Test
     public void PartyPlanning_FindsExpectedOutOfString_a() throws Exception   {
         Party newParty = new Party(1,"a","a","a");
-        assertEquals("a",newParty.getgetFood());
+        assertEquals("a",newParty.getFood());
     }
 
     @Test
     public void PartyPlanning_FindsCostofOnePerson_10() throws Exception   {
         Party newParty= new Party(1,"a","a","a");
-        int newCost = newParty.getgetNumberOfPeople() *10;
+        int newCost = newParty.getNumberOfPeople() *10;
         assertEquals(10,newCost);
     }
     @Test
     public void PartyPlanning_FindsCostofTwoItems_15() throws Exception   {
         Party newParty= new Party(1,"a","a","a");
-        int newCost = newParty.getgetNumberOfPeople() *10;
-        String userInput = newParty.getgetFood();
+        int newCost = newParty.getNumberOfPeople() *10;
+        String userInput = newParty.getFood();
         Integer newCost1= 0;
         if (userInput == "a") {
              newCost1=5;
@@ -42,10 +42,10 @@ public class PartyTest {
     @Test
     public void PartyPlanning_FindsCostofFourItems_15() throws Exception   {
         Party newParty= new Party(2,"a","a","a");
-        int newCost = newParty.getgetNumberOfPeople() *10;
+        int newCost = newParty.getNumberOfPeople() *10;
         String userInput1 = newParty.getFood();
         String userInput2 = newParty.getBeverages();
-        String userInput3 = newParty.entertaiment;
+        String userInput3 = newParty.getEntertaiment();
         Integer newCost1= 0;
         Integer newCost2= 0;
         Integer newCost3= 0;
@@ -68,7 +68,7 @@ public class PartyTest {
         int totalPeople = newParty.getNumberOfPeople();
         String userInput1 = newParty.getFood();
         String userInput2 = newParty.getBeverages();
-        String userInput3 = newParty.entertaiment;
+        String userInput3 = newParty.getEntertaiment();
         Integer newCost1= 0;
         Integer newCost2= 0;
         Integer newCost3= 0;
@@ -94,7 +94,7 @@ public class PartyTest {
         int totalPeople = newParty.getNumberOfPeople();
         String userInput1 = newParty.getFood();
         String userInput2 = newParty.getBeverages();
-        String userInput3 = newParty.entertaiment;
+        String userInput3 = newParty.getEntertaiment();
         Integer newCost1= 0;
         Integer newCost2= 0;
         Integer newCost3= 0;

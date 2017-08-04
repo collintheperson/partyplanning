@@ -70,7 +70,7 @@ public class App {
                 if (discountPrice == 783) {
                     userTotal -= 250;
                 }
-                System.out.println("Your total is" + "  " + userTotal);
+                System.out.println("Your total with discount is" + "  " + userTotal);
 
                 programRunning = false;
 
