@@ -59,7 +59,7 @@ public class PartyTest {
             newCost3=500;
         };
         int totalCost = newCost1 + newCost + newCost2 + newCost3;
-        assertEquals(20,totalCost);
+        assertEquals(525,totalCost);
     }
 
 
