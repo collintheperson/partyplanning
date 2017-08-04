@@ -9,11 +9,11 @@ public class Party {
     public String beverages;
     public String entertaiment;
 
-    public Party(int numberOfPeople, String food, String beverages, String entertaiment)    {
+    public Party(int numberOfPeople, String food, String beverages, String entertainment)    {
         this.numberOfPeople = numberOfPeople;
         this.food = food;
         this.beverages = beverages;
-        this.entertaiment = entertaiment;
+        this.entertaiment = entertainment;
     }
 
 
