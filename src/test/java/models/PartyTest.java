@@ -16,8 +16,16 @@ public class PartyTest {
     }
 
     @Test
-    public void PartyPlanning_FindsExpectedOutofString_10() throws Exception   {
-        Party newCost = new Party(1,"a","a","a");
-        assertEquals("a",newCost.food);
+    public void PartyPlanning_FindsExpectedOutOfString_a() throws Exception   {
+        Party newParty = new Party(1,"a","a","a");
+        assertEquals("a",newParty.food);
     }
+
+    @Test
+    public void PartyPlanning_FindsCostofOnePerson_10() throws Exception   {
+        Party newParty= new Party(1,"a","a","a");
+        int newCost = newParty.numberOfPeople *10;
+        assertEquals(10,newCost);
+    }
+
 }

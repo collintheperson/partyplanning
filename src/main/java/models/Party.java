@@ -14,7 +14,7 @@ public class Party {
         this.food = food;
         this.beverages = beverages;
         this.entertaiment = entertainment;
-    }
+}
 
 
 }
