@@ -41,7 +41,7 @@ public class PartyTest {
     }
     @Test
     public void PartyPlanning_FindsCostofFourItems_15() throws Exception   {
-        Party newParty= new Party(1,"a","a","a");
+        Party newParty= new Party(2,"a","a","a");
         int newCost = newParty.numberOfPeople *10;
         String userInput1 = newParty.food;
         String userInput2 = newParty.beverages;
@@ -59,7 +59,34 @@ public class PartyTest {
             newCost3=500;
         };
         int totalCost = newCost1 + newCost + newCost2 + newCost3;
-        assertEquals(525,totalCost);
+        assertEquals(535,totalCost);
+    }
+    @Test
+    public void PartyPlanning_FindsCostofFourItemsMinus1Coupon_15() throws Exception   {
+        Party newParty= new Party(501,"a","a","a");
+        int newCost = newParty.numberOfPeople *10;
+        int totalPeople = newParty.numberOfPeople;
+        String userInput1 = newParty.food;
+        String userInput2 = newParty.beverages;
+        String userInput3 = newParty.entertaiment;
+        Integer newCost1= 0;
+        Integer newCost2= 0;
+        Integer newCost3= 0;
+        Integer newCoupon1=0;
+        Integer newCoupon2=0;
+        if (userInput1 == "a") {
+            newCost1=5;
+        };
+        if (userInput2 == "a") {
+            newCost2=10;
+        };
+        if (userInput3 == "a") {
+            newCost3=500;
+        };
+        if (totalPeople >= 500)
+            newCoupon1= -1000;
+        int totalCost = newCost1 + newCost + newCost2 + newCost3 + newCoupon1;
+        assertEquals(535,totalCost);
     }
 
 
