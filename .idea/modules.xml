@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/party_planning.iml" filepath="$PROJECT_DIR$/.idea/modules/party_planning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/party_planning_main.iml" filepath="$PROJECT_DIR$/.idea/modules/party_planning_main.iml" group="party_planning" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/party_planning_test.iml" filepath="$PROJECT_DIR$/.idea/modules/party_planning_test.iml" group="party_planning" />
+    </modules>
+  </component>
+</project>
