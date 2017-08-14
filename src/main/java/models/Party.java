@@ -17,64 +17,66 @@ public class Party {
         this.entertainment = entertainment;
 }
 
-    public int getNumberOfPeople() {
+    public int getNumberOfPeople(int numberOfPeople) {
+        int CostOfNumberOfPeople = numberOfPeople * 10;
         return numberOfPeople;
     }
 
     public int getBeverages(String beverages) {
-        int beverageCost = 0;
-        if ( beverages == "beer") {
-            beverageCost = 15;
-        } else if (beverages == "wine") {
-            beverageCost = 25;
-        } else if (beverages == "soda") {
-            beverageCost = 10;
+        int beverageCost = 1;
+        switch (beverages) {
+            case "beer":
+                beverageCost = 15;
+                break;
+            case "wine":
+                beverageCost = 25;
+                break;
+            case "soda":
+                beverageCost = 10;
+                break;
         }
         return beverageCost;
     }
 
     public int getEntertainment(String entertainment) {
-        int entertainmentCost = 0;
-        if ( entertainment == "dj") {
-            entertainmentCost = 500;
-        } else if (entertainment == "rock") {
-            entertainmentCost = 750;
-        } else if (entertainment == "none") {
-            entertainmentCost = 0;
+        int entertainmentCost = 1;
+        switch (entertainment) {
+            case "dj":
+                entertainmentCost = 500;
+                break;
+            case "rock":
+                entertainmentCost = 750;
+                break;
+            case "none":
+                entertainmentCost = 0;
+                break;
         }
         return entertainmentCost;
     }
 
     public int getFood(String food) {
-        int foodCost = 0;
-        if (food == "meat") {
-            foodCost = 15;
-        } else if (food == "fish") {
-            foodCost = 20;
-        } else if (food == "veg") {
-            foodCost = 12;
+        int foodCost = 1;
+        switch (food) {
+            case "meat":
+                foodCost = 15;
+                break;
+            case "fish":
+                foodCost = 20;
+                break;
+            case "veg":
+                foodCost = 12;
+                break;
         }
         return foodCost;
     }
 
-//    public int getFinalCost {
-//        getNumberOfPeople()*10(getFood("")+getBeverages(""))+getEntertainment("");
-//        return finalCost;
-//    }
-
-    public void setNumberOfPeople(int numberOfPeople) {
-        this.numberOfPeople = numberOfPeople;
+    public int getCostPerPerson ( int foodCost, int beverageCost) {
+        int finalCost = (foodCost+beverageCost);
+        return finalCost;
+    }
+    public int getTotalCost ( int totalPeople ,int finalCost, int entertainmentCost) {
+        int totalCost = (totalPeople *10 )+finalCost + entertainmentCost;
+        return totalCost;
     }
 
-    public void setFood(String food) {
-        this.food = food;
-    }
-
-    public void setBeverages(String beverages) {
-        this.beverages = beverages;
-    }
-
-    public void setEntertainment(String entertainment) {
-        this.entertainment = entertainment;
-    }
 }

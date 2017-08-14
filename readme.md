@@ -1,26 +1,20 @@
-# _{Party Event Price Calculator}_
+# _Party Event Price Calculator_
 
-#### _{An app to help figure out how much someone should charge for an event}, {9/4/2017}_
+#### _An app to help figure out how much someone should charge for an event, 9/4/2017_
 
-#### By _**{Collin Person}**_
+#### By _**Collin Person**_
 
 ## Description
 
-_{This is an app to help figure how much to charge depending on certain parameters }_
+_This is an app to help figure how much to charge depending on certain parameters _
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
-
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
+* _Clone or fork my repository and open it up with a java app of your choice.
 
 ## Known Bugs
 
-_{It needs an update to put more logic in the back end because currently if the price changes, the person changing it would have to change multiple variables instead of calling a variables that call on that instance. }_
+_ Probably could fit more stuff in the backend but i ran out of time.
 
 ## Support and contact details
 
