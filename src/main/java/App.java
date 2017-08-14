@@ -15,9 +15,7 @@ public class App {
         while (programRunning) {
 
             try {
-                int foodCost = 0;
-                int drinkCost = 0;
-                int entertainmentCost = 0;
+                Party userParty = new Party(0,"a","b","c");
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
                 System.out.println("Welcome to Collin's Crazy Party Planning Service! We do parties for small, medium, and large sized parties ");
                 System.out.println("How many people are you going to have for your party");
@@ -25,52 +23,38 @@ public class App {
                 String userInputPeople = bufferedReader.readLine();
                 int userInputPeopleVal = Integer.parseInt(userInputPeople);
 
-                System.out.println("What type of food do you want at your party?Please respond with the corresponding letter a)Meat b)Fish c)Vegetarian");
+                System.out.println("What type of food do you want at your party?Please respond with the corresponding word meat)meat::::: fish)fish:::: veg)vegetarian");
 
-                String userInputFood = bufferedReader.readLine();
+                String food = bufferedReader.readLine();
+                userParty.getFood(food);
 
-                if ("a".equalsIgnoreCase(userInputFood)) {
-                    foodCost = 15;
-                } else if ("b".equalsIgnoreCase(userInputFood)) {
-                    foodCost = 20;
-                } else if ("c".equalsIgnoreCase(userInputFood)) {
-                    foodCost = 12;
-                } else {
-                    System.out.println("It did not take a or b or c");
-                }
-                System.out.println("What type of drink package do you want at your party?Please respond with the corresponding letter a)Beer & Wine b)Beer,wine, and hard liquor c)Soda and juices");
 
-                String userInputBeverage = bufferedReader.readLine();
-                if ("a".equalsIgnoreCase(userInputBeverage)) {
-                    drinkCost = 18;
-                } else if ("b".equalsIgnoreCase(userInputBeverage)) {
-                    drinkCost = 27;
-                } else if ("c".equalsIgnoreCase(userInputBeverage)) {
-                    drinkCost = 9;
-                }
-                System.out.println("What type of entertainment package do you want at your party?Please respond with the corresponding letter a)Rock band b)Live DJ c)None");
+                System.out.println("What type of drink package do you want at your party?Please respond with the corresponding word beer)beer :::::wine)wine soda)soda");
 
-                String userInputEntertainment = bufferedReader.readLine();
+                String beverage = bufferedReader.readLine();
+                userParty.getBeverages(beverage);
 
-                if ("a".equalsIgnoreCase(userInputEntertainment)) {
-                    entertainmentCost = 750;
-                } else if ("b".equalsIgnoreCase(userInputEntertainment)) {
-                    entertainmentCost = 500;
-                } else if ("c".equalsIgnoreCase(userInputEntertainment)) {
-                    entertainmentCost = 0;
-                }
-                int userTotal = userInputPeopleVal * (drinkCost + foodCost) + entertainmentCost;
-                int discountPrice = entertainmentCost + drinkCost + foodCost;
+                System.out.println("What type of entertainment package do you want at your party?Please respond with the word rock)Rock band ::::::dj)Live DJ ::::::none)None");
+
+                String entertainment = bufferedReader.readLine();
+                userParty.getEntertainment(entertainment);
+
+                System.out.println(userParty.getFood(food));
+                System.out.println(userParty.getBeverages(beverage));
+                System.out.println(userParty.getEntertainment(entertainment));
+                System.out.println(userInputPeopleVal);
+                int userTotal = userInputPeopleVal * (userParty.getFood(food)+userParty.getBeverages(beverage)) + userParty.getEntertainment(entertainment);
+        //        int discountPrice = entertainmentCost + drinkCost + foodCost;
                 System.out.println("Your current total is" + " " + userTotal);
                 System.out.println("Would you like to apply a coupon: We currently have two coupons one triggers if have a party of 500 or more and the other is choosing 'a' for each input");
 
                 if (userInputPeopleVal > 499) {
                     userTotal -= 3000;
                 }
-                if (discountPrice == 783) {
-                    userTotal -= 250;
-                }
-                System.out.println("Your total with discount is" + "  " + userTotal);
+//                if (discountPrice == 783) {
+//                    userTotal -= 250;
+//                }
+//                System.out.println("Your total with discount is" + "  " + userTotal);
 
                 programRunning = false;
 

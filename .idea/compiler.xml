@@ -4,6 +4,8 @@
     <bytecodeTargetLevel>
       <module name="party_planning_main" target="1.8" />
       <module name="party_planning_test" target="1.8" />
+      <module name="partyplanning_main" target="1.8" />
+      <module name="partyplanning_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
