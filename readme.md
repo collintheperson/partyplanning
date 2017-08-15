@@ -1,16 +1,16 @@
-# _Party Event Price Calculator_
+#  Party Event Price Calculator
 
-#### _An app to help figure out how much someone should charge for an event, 9/4/2017_
+####  An app to help figure out how much someone should charge for an event, 9/4/2017
 
-#### By _Collin Person_
+#### By  Collin Person
 
 ## Description
 
-_This is an app to help figure how much to charge depending on certain parameters _
+_This is an app to help figure how much to charge depending on certain parameters
 
 ## Setup/Installation Requirements
 
-_Clone or fork my repository and open it up with a java app of your choice.
+Clone or fork my repository and open it up with a java app of your choice.
 
 
 
