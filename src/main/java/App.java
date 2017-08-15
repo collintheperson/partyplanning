@@ -21,39 +21,36 @@ public class App {
                 System.out.println("How many people are you going to have for your party");
 
                 int people = Integer.parseInt(bufferedReader.readLine());
-                int finalPeople = people * 10;
 
-                System.out.println("What type of food do you want at your party?Please respond with the corresponding word meat)meat::::: fish)fish:::: veg)vegetarian");
-
+                System.out.println("What type of food do you want at your party?Please respond with the corresponding word");
+                System.out.println("meat: steak, tri-tip, pork shoulder");
+                System.out.println("fish:shrimp, halibut, tuna, ");
+                System.out.println("veg: vegetarian skewers, soup and salad galore, and fruit bowls inside of fruit bowls");
                 String food = bufferedReader.readLine();
 
-                System.out.println("What type of drink package do you want at your party?Please respond with the corresponding word beer)beer :::::wine)wine::::: soda)soda");
-
+                System.out.println("What type of drink package do you want at your party?Please respond with the corresponding word");
+                System.out.println("beer:beer and soda");
+                System.out.println("wine: wine and soda");
+                System.out.println("soda: soda");
                 String beverage = bufferedReader.readLine();
 
 
-                System.out.println("What type of entertainment package do you want at your party?Please respond with the word rock)Rock band ::::::dj)Live DJ ::::::none)None");
-
+                System.out.println("What type of entertainment package do you want at your party?Please respond with the word");
+                System.out.println("rock : The awesome local hair metal group Hair Splitters");
+                System.out.println("dj : DJ Dogowner is here to fetch the hottest beats");
+                System.out.println("none : You either have your own entertainment or want a quieter party");
                 String entertainment = bufferedReader.readLine();
 
                 Party userParty = new Party(people,food,beverage,entertainment);
 
                 int pricePerPerson = userParty.getCostPerPerson((userParty.getFood(food)),(userParty.getBeverages(beverage)));
-                int priceTotal=userParty.getTotalCost(finalPeople,pricePerPerson,(userParty.getEntertainment(entertainment)));
 
-                System.out.println("Your current total is" + " " + priceTotal);
-                System.out.println("Would you like to apply a coupon: We currently have two coupons one triggers if have a party of 500 or more and the other is choosing 'a' for each input");
+                System.out.println("Would you like to apply a coupon: We currently have two coupons one triggers if you pick the rock band  and the other is for having more than 25 people");
 
-                if (pricePerPerson > 30) {
-                    priceTotal -= 10;
-                }
-                if (people > 783) {
-                    priceTotal -= 250;
-                }
-                System.out.println("Your total with discount is" + "  " + priceTotal);
+                int finalCost= userParty.getTotalCostDiscount(people,pricePerPerson,userParty.getEntertainment(entertainment));
+                System.out.println("Your total with discount is" + "  " + finalCost);
 
-                programRunning = false;
-
+                    programRunning = false;
 
             }
             catch (IOException e) {

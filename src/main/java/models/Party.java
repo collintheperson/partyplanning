@@ -18,12 +18,12 @@ public class Party {
 }
 
     public int getNumberOfPeople(int numberOfPeople) {
-        int CostOfNumberOfPeople = numberOfPeople * 10;
-        return numberOfPeople;
+        int CostOfNumberOfPeople = numberOfPeople;
+        return CostOfNumberOfPeople;
     }
 
     public int getBeverages(String beverages) {
-        int beverageCost = 1;
+        int beverageCost = 0;
         switch (beverages) {
             case "beer":
                 beverageCost = 15;
@@ -39,7 +39,7 @@ public class Party {
     }
 
     public int getEntertainment(String entertainment) {
-        int entertainmentCost = 1;
+        int entertainmentCost = 0;
         switch (entertainment) {
             case "dj":
                 entertainmentCost = 500;
@@ -55,7 +55,7 @@ public class Party {
     }
 
     public int getFood(String food) {
-        int foodCost = 1;
+        int foodCost = 0;
         switch (food) {
             case "meat":
                 foodCost = 15;
@@ -74,9 +74,19 @@ public class Party {
         int finalCost = (foodCost+beverageCost);
         return finalCost;
     }
-    public int getTotalCost ( int totalPeople ,int finalCost, int entertainmentCost) {
-        int totalCost = (totalPeople *10 )+finalCost + entertainmentCost;
+    public int getTotalCost ( int numberOfPeople ,int finalCost, int entertainmentCost) {
+        int totalCost = numberOfPeople +finalCost + entertainmentCost;
+
         return totalCost;
     }
-
+    public int getTotalCostDiscount ( int numberOfPeople ,int finalCost, int entertainmentCost) {
+        int totalCostDiscount = numberOfPeople * finalCost + entertainmentCost;
+        if (entertainmentCost == 750)   {
+            totalCostDiscount -= 250;
+        }
+        if (numberOfPeople >= 25) {
+            totalCostDiscount -= 500;
+        }
+            return totalCostDiscount;
+        }
 }
