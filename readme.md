@@ -6,7 +6,7 @@
 
 ## Description
 
-_This is an app to help figure how much to charge depending on certain parameters
+This is an app to help figure how much to charge depending on certain parameters
 
 ## Setup/Installation Requirements
 
